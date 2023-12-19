@@ -72,7 +72,7 @@ def performClustering():
 
         user_cluster = kmeans.predict(user_data)
         st.subheader('Your Report : ')
-        output = f'You belong to Cluster {user_cluster[0] + 1}'
+        output = f'You belong to Cluster {user_cluster[0]}'
         st.write(output)
 
     selected_attributes = getSelectedAttributes()
