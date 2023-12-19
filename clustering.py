@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 
 def loadData():
-    df = pd.read_csv('FSVA 2022.csv')
+    df = pd.read_csv('FSVA 2022 Cleaned.csv')
     return df
 
 def performClustering():
