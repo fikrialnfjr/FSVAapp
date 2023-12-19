@@ -4,10 +4,10 @@ from clustering import *
 from visualization import *
 
 
-def showRawData():
-    df = loadData()
-    # st.subheader('Raw Data')
-    # st.dataframe(df)
+# def showRawData():
+#     df = loadData()
+#     # st.subheader('Raw Data')
+#     # st.dataframe(df)
 
 def main():
     st.title('Data Science Web App')
@@ -16,7 +16,6 @@ def main():
     selected_menu = st.sidebar.selectbox('Select Option', menu_options)
 
     if selected_menu == 'Clustering':
-        showRawData()
         performClustering()
     elif selected_menu == 'Visualization':
         showVisualization()
