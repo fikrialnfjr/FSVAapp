@@ -57,7 +57,7 @@ def showVisualization():
                         st.warning('Cannot choose size for Histogram.')
                 else:
                     if size_option == '-':
-                        plt.hist(df[x_axis], bins='auto', color='blue')
+                        plt.hist(df[x_axis], bins='auto', color='skyblue')
                         plt.xlabel(x_axis)
                         plt.ylabel('Count')
                         plt.title('Histogram')
