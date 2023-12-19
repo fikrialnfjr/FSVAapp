@@ -68,7 +68,7 @@ def performClustering():
         st.subheader('Cluster Labels:')
         st.write(df[['Cluster'] + selected_attributes])
 
-        # Perform prediction on user data based on cluster centroids
+        # Prediksi data user berdasarkan cluster centroids
         user_data = pd.DataFrame(columns=selected_attributes)
         for attribute in selected_attributes:
             user_input = st.number_input(f'Input nilai {attribute}')

@@ -11,7 +11,7 @@ def showVisualization():
     # Load dataset
     df = loadData()
 
-    # Checkboxes for visualization options
+    # Checkbox untuk opsi visualisasi
     x_axis = st.sidebar.selectbox('Select X-Axis', ['-', *df.columns])
     y_axis = st.sidebar.selectbox('Select Y-Axis', ['-', *df.columns])
     color_option = st.sidebar.selectbox('Select Color', ['-', *df.columns])
