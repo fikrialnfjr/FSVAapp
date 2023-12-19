@@ -10,7 +10,7 @@ from visualization import *
 #     # st.dataframe(df)
 
 def main():
-    st.title('Data Science Web App')
+    st.title('FSVA Web App')
     st.sidebar.subheader('Menu')
     menu_options = ['Overview Project', 'Prediction', 'Clustering', 'Visualization']
     selected_menu = st.sidebar.selectbox('Select Option', menu_options)
