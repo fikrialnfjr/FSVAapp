@@ -40,6 +40,10 @@ def performClustering():
             if st.checkbox('Stunting (%)'):
                 selected_attributes.append('Stunting (%)')
 
+        if len(selected_attributes) != 2:
+            st.warning('Select 2 Attributes!')
+            st.stop()
+
         return selected_attributes
     
     num_clusters = st.slider('Number of Clusters', min_value=2, max_value=10, value=3)
