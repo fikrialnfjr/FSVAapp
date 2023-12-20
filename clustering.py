@@ -46,7 +46,7 @@ def performClustering():
 
         return selected_attributes
     
-    num_clusters = st.slider('Number of Clusters', min_value=2, max_value=10, value=3)
+    num_clusters = st.number_input('Number of Clusters', min_value=2, max_value=10, value=3, step=1)
 
     def performClustering(selected_attributes, num_clusters):
         X = df[selected_attributes]
