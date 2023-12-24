@@ -6,10 +6,14 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
+def loadData():
+    df = pd.read_csv('FSVA 2022 Cleaned.csv')
+    return df
+
 def performPrediction():
     st.subheader("Dataset")
-    df = pd.read_csv('FSVA 2022 Cleaned.csv')
-    df
+    df = loadData()
+    st.write(df)
 
     x = df.drop(['Komposit'], axis=1)
     y = df['Komposit']
