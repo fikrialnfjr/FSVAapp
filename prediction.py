@@ -56,16 +56,16 @@ def performPrediction():
         model = RandomForestClassifier(n_estimators=100, random_state=42)
         # Melatih model RandomForestClassifier
         model.fit(x_train, y_train)
-        # Menghitung dan menampilkan akurasi
-        st.subheader("Accuracy : ")
-        st.write(str(accuracy_score(y_test, model.predict(x_test))*100)+'%')
     elif algorithm == "SVM":
         model = SVC(kernel='rbf', C=1.0, gamma='scale', random_state=42)
         # Melatih model LogisticRegression
         model.fit(x_train, y_train)
-        # Menghitung dan menampilkan akurasi
-        st.subheader("Accuracy : ")
-        st.write(str(accuracy_score(y_test, model.predict(x_test))*100)+'%')
+        
+    # Menghitung dan menampilkan akurasi
+    accuracy = accuracy_score(y_test, model.predict(x_test)) * 100
+    rounded_accuracy = round(accuracy, 2)
+    st.subheader("Accuracy : ")
+    st.write(f"Accuracy: {rounded_accuracy}%")
 
     if st.button('Predict'):
         prediction = model.predict(user_data_scaled)
