@@ -33,12 +33,12 @@ def show_overview():
     """)
 
     st.subheader("Workflow App")
-    local_image_path_1 = "/Users/fikrialinfijar/Developer/FSVA/1.png"
-    st.image(local_image_path_1, caption="Workflow FSVA", use_column_width=True)
+    local_image_1 = "1.png"
+    st.image(local_image_1, caption="Workflow FSVA", use_column_width=True)
 
     st.subheader("Workflow Modelling")
-    local_image_path_2 = "/Users/fikrialinfijar/Developer/FSVA/2.png"
-    st.image(local_image_path_2, caption="Workflow Modelling", use_column_width=True)
+    local_image_2 = "2.png"
+    st.image(local_image_2, caption="Workflow Modelling", use_column_width=True)
 
     st.write("#### **Pengumpulan Dataset**")
     st.write("""
