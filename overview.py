@@ -42,7 +42,7 @@ def show_overview():
 
     st.write("#### **Pengumpulan Dataset**")
     st.write("""
-    Dataset yang digunakan berasal web Badan Pangan Nasional (BPN) : 
+    Dataset yang digunakan berasal dari web Badan Pangan Nasional (BPN) : 
     https://fsva.badanpangan.go.id
     """)
 
