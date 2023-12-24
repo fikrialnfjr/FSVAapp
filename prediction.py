@@ -1,20 +1,15 @@
 import pandas as pd
 import streamlit as st
 from sklearn.metrics import accuracy_score
-from sklearn.linear_model import LogisticRegression
+from sklearn.svm import SVC
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-def loadData():
-    df = pd.read_csv('FSVA 2022 Cleaned.csv')
-    return df
-
 def performPrediction():
     st.subheader("Dataset")
-    df = loadData()
-    
-    st.write(df)
+    df = pd.read_csv('FSVA 2022 Cleaned.csv')
+    df
 
     x = df.drop(['Komposit'], axis=1)
     y = df['Komposit']
@@ -55,7 +50,7 @@ def performPrediction():
     user_data_scaled = scaler.transform(user_data)
 
     # Tambahkan dropdown untuk memilih algoritma
-    algorithm = st.selectbox("Choose Algorithm", ["Random Forest", "Logistic Regression"])
+    algorithm = st.selectbox("Choose Algorithm", ["Random Forest", "SVM"])
 
     if algorithm == "Random Forest":
         model = RandomForestClassifier(n_estimators=100, random_state=42)
@@ -64,8 +59,8 @@ def performPrediction():
         # Menghitung dan menampilkan akurasi
         st.subheader("Accuracy : ")
         st.write(str(accuracy_score(y_test, model.predict(x_test))*100)+'%')
-    elif algorithm == "Logistic Regression":
-        model = LogisticRegression(random_state=42, max_iter=1000)
+    elif algorithm == "SVM":
+        model = SVC(kernel='rbf', C=1.0, gamma='scale', random_state=42)
         # Melatih model LogisticRegression
         model.fit(x_train, y_train)
         # Menghitung dan menampilkan akurasi
