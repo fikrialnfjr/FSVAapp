@@ -8,7 +8,6 @@ def loadData():
     return df
 
 def showVisualization():
-    # Load dataset
     df = loadData()
 
     # Checkbox untuk opsi visualisasi
