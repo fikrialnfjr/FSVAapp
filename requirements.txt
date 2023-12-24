@@ -1,0 +1,7 @@
+matplotlib==3.7.1
+pandas==2.0.1
+seaborn==0.12.2
+streamlit==1.22.0
+Pillow==9.5.0
+#sklearn==1.2.2
+scikit-learn
