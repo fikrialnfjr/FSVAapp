@@ -21,12 +21,18 @@ def show_overview():
     suatu wilayah berdasarkan indikator-indikator tertentu. Model ini diharapkan dapat memberikan pemahaman yang lebih 
     akurat dan komprehensif terhadap situasi pangan di wilayah tersebut. Hasil prediksi akan mengelompokkan wilayah 
     ke dalam salah satu kategori berikut:
-    - Sangat Rentan
-    - Rentan
-    - Agak Rentan
-    - Agak Tahan
-    - Tahan
-    - Sangat Tahan
+
+    - Komposit 1 mengartikan bahwa "Sangat Rentan"
+
+    - Komposit 2 mengartikan bahwa "Rentan"
+
+    - Komposit 3 mengartikan bahwa "Agak Rentan"
+
+    - Komposit 4 mengartikan bahwa "Agak Tahan"
+
+    - Komposit 5 mengartikan bahwa "Tahan"
+
+    - Komposit 6 mengartikan bahwa "Sangat Tahan"
 
     Kategori ini dapat meningkatkan pemahaman terhadap situasi pangan dan memberikan kontribusi dalam mengambil 
     keputusan yang berkelanjutan dan berdampak positif terhadap ketahanan pangan di wilayah yang diteliti.
@@ -97,6 +103,7 @@ def show_overview():
 
         - Pada data test\t: 0.8349514563106796
     """)
+
 
     st.write("##### Unupervised Learning")
     st.write("""
