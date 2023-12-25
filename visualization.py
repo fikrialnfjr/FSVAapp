@@ -35,7 +35,7 @@ def showVisualization():
                 scatterplot.set_title('Scatter Plot')
                 st.pyplot()
             else:
-                st.warning('Axis-X and Axis-Y must be different.')
+                st.warning('X-Axis and Y-Axis must be different.')
         else:
             st.info('Please select both X-Axis and Y-Axis.')
 
@@ -64,6 +64,6 @@ def showVisualization():
                     else:
                         st.warning('Cannot choose size for Histogram.')
             else:
-                st.warning('Only select Axis-X for Histogram.')
+                st.warning('Only select X-Axis for Histogram.')
         else:
             st.info('Please select X-Axis.')
