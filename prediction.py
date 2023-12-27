@@ -95,21 +95,21 @@ def performPrediction():
             output += 'Kota / Kabupaten Anda perlu memperbaiki aspek berikut : \n'
 
             if user_data['NCPR'].iloc[0] > 1:
-                output += '\n-Perlu memperhatikan tingkat NCPR.'
+                output += '\n-Perlu memperhatikan tingkat NCPR.\n'
             if user_data['Kemiskinan (%)'].iloc[0] > 20:
-                output += '\n-Perlu memperhatikan tingkat kemiskinan.'
+                output += '\n-Perlu memperhatikan tingkat kemiskinan.\n'
             if user_data['Pengeluaran Pangan (%)'].iloc[0] > 50:
-               output += '\n-Perlu memperhatikan tingkat pengeluaran pangan.'
+               output += '\n-Perlu memperhatikan tingkat pengeluaran pangan.\n'
             if user_data['Tanpa Listrik (%)'].iloc[0] > 30:
-               output += '\n-Mungkin perlu mengadakan program subsidi untuk meningkatkan pemerataan listrik .'
+               output += '\n-Mungkin perlu mengadakan program subsidi untuk meningkatkan pemerataan listrik.\n'
             if user_data['Tanpa Air Bersih (%)'].iloc[0] > 50:
-               output += '\n-Perlu mengadakan suatu program untuk meningkatkan ketersediaan air bersih.'
+               output += '\n-Perlu mengadakan suatu program untuk meningkatkan ketersediaan air bersih.\n'
             if user_data['Lama Sekolah Perempuan (tahun)'].iloc[0] < 7.5:
-               output += '\n-Perlu mengadakan program perbaikan falisitas pendidikan serta edukasi mengenai pentingnya pendidikan.'
+               output += '\n-Perlu mengadakan program perbaikan falisitas pendidikan serta edukasi mengenai pentingnya pendidikan.\n'
             if user_data['Rasio Tenaga Kesehatan'].iloc[0] > 15:
-               output += '\n-Perlu menambah tenaga kesehatan.'
+               output += '\n-Perlu menambah tenaga kesehatan.\n'
             if user_data['Stunting (%)'].iloc[0] > 30:
-               output += '\n-Perlu mengadakan program edukasi mengenai asupan gizi.'
+               output += '\n-Perlu mengadakan program edukasi mengenai asupan gizi.\n'
 
         if prediction[0] in [5, 6]:
             if prediction[0] == 5:
@@ -134,19 +134,19 @@ def performPrediction():
                 output += '\nNamun, Kota / Kabupaten Anda perlu memperbaiki aspek berikut :\n'
 
                 if user_data['NCPR'].iloc[0] > 0.75:
-                    output += '\n-Perlu memperhatikan tingkat NCPR.'
+                    output += '\n-Perlu memperhatikan tingkat NCPR.\n'
                 if user_data['Kemiskinan (%)'].iloc[0] > 15:
-                    output += '\n-Perlu memperhatikan tingkat kemiskinan.'
+                    output += '\n-Perlu memperhatikan tingkat kemiskinan.\n'
                 if user_data['Pengeluaran Pangan (%)'].iloc[0] > 40:
-                    output += '\n-Perlu memperhatikan tingkat pengeluaran pangan.'
+                    output += '\n-Perlu memperhatikan tingkat pengeluaran pangan.\n'
                 if user_data['Tanpa Listrik (%)'].iloc[0] > 20:
-                    output += '\n-Mungkin perlu mengadakan program subsidi untuk meningkatkan pemerataan listrik.'
+                    output += '\n-Mungkin perlu mengadakan program subsidi untuk meningkatkan pemerataan listrik.\n'
                 if user_data['Tanpa Air Bersih (%)'].iloc[0] > 40:
-                    output += '\n-Perlu mengadakan suatu program untuk meningkatkan ketersediaan air bersih.'
+                    output += '\n-Perlu mengadakan suatu program untuk meningkatkan ketersediaan air bersih.\n'
                 if user_data['Lama Sekolah Perempuan (tahun)'].iloc[0] < 8.5:
-                    output += '\n-Perlu mengadakan program perbaikan fasilitas pendidikan serta edukasi mengenai pentingnya pendidikan.'
+                    output += '\n-Perlu mengadakan program perbaikan fasilitas pendidikan serta edukasi mengenai pentingnya pendidikan.\n'
                 if user_data['Stunting (%)'].iloc[0] > 25:
-                    output += '\n-Perlu mengadakan program edukasi mengenai asupan gizi.'
+                    output += '\n-Perlu mengadakan program edukasi mengenai asupan gizi.\n'
             else:
                 output += "\nKota / Kabupaten Anda dalam kondisi baik!"
 
