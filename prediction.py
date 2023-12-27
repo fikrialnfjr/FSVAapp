@@ -26,6 +26,8 @@ def performPrediction():
     x_test = scaler.transform(x_test)
 
     def user_report():
+        st.write("**Masukkan Nilai Variabel Kota / Kabupaten Anda untuk Prediksi Status Ketahanan Pangan**")
+
         col1, col2 = st.columns(2)
 
         with col1:
