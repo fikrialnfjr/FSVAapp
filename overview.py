@@ -9,8 +9,7 @@ def show_overview():
     FSVA merupakan alat analisis yang menyajikan informasi terkait 
     ketahanan dan kerentanan pangan berdasarkan indikator-indikator kunci.
 
-    Pemilihan topik FSVA sebagai fokus proyek ini didasarkan pada pentingnya pemahaman mendalam terhadap ketahanan pangan, 
-    terutama dalam konteks perubahan iklim dan tantangan global. FSVA memberikan pemahaman yang holistik terhadap 
+    Pemilihan topik FSVA sebagai fokus proyek ini didasarkan pada pentingnya pemahaman mendalam terhadap ketahanan pangan. FSVA memberikan pemahaman yang holistik terhadap 
     faktor-faktor yang memengaruhi ketahanan pangan dan berpotensi memberikan wawasan berharga untuk kebijakan dan strategi mitigasi.
     """)
 
