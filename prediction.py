@@ -80,22 +80,20 @@ def performPrediction():
         
         st.subheader('Your Report : ')
         output = ''
-        if prediction[0] == 1:
-            output = 'Sangat Rentan\n\n'
-        if prediction[0] == 2:
-            output = 'Rentan\n\n'
-        if prediction[0] == 3:
-            output = 'Agak Rentan\n\n'
-        if prediction[0] == 4:
-            output = 'Agak Tahan\n\n'
-        if prediction[0] == 5:
-            output = 'Tahan\n\n'
-        if prediction[0] == 6:
-            output = 'Sangat Tahan\n\n'
-
+        
         if prediction[0] in [1, 2, 3, 4]:
-            output += f'''\n Kota / Kabupaten  Anda masuk ke dalam kategori Prioritas {prediction[0]}!\n\n,
-            Kota / Kabupaten Anda perlu memperbaiki aspek berikut : \n'''
+
+            if prediction[0] == 1:
+                output += f'''\n Kota / Kabupaten  Anda masuk ke dalam kategori Prioritas {prediction[0]}, yaitu kategori Sangat Rentan Pangan.\n\n'''
+            if prediction[0] == 2:
+                output += f'''\n Kota / Kabupaten  Anda masuk ke dalam kategori Prioritas {prediction[0]}, yaitu kategori Rentan Pangan.\n\n'''
+            if prediction[0] == 3:
+                output += f'''\n Kota / Kabupaten  Anda masuk ke dalam kategori Prioritas {prediction[0]}, yaitu kategori Agak Rentan Pangan.\n\n'''
+            if prediction[0] == 4:
+                output += f'''\n Kota / Kabupaten  Anda masuk ke dalam kategori Prioritas {prediction[0]}, yaitu kategori Agak Tahan Pangan.\n\n'''
+
+            output += 'Kota / Kabupaten Anda perlu memperbaiki aspek berikut : \n'
+
             if user_data['NCPR'].iloc[0] > 1:
                 output += '\n- Kota / Kabupaten Anda perlu memperhatikan tingkat NCPR.'
             if user_data['Kemiskinan (%)'].iloc[0] > 20:
@@ -116,7 +114,11 @@ def performPrediction():
                output += '\n- Kota / Kabupaten Anda perlu mengadakan program edukasi mengenai asupan gizi.'
 
         if prediction[0] in [5, 6]:
-            output += f'''\n Kota / Kabupaten  Anda masuk ke dalam kategori Prioritas {prediction[0]}!\n\n'''
+            if prediction[0] == 5:
+             output += f'''\n Kota / Kabupaten  Anda masuk ke dalam kategori Prioritas {prediction[0]}, yaitu kategori Tahan Pangan.\n\n'''
+            if prediction[0] == 6:
+                output += f'''\n Kota / Kabupaten  Anda masuk ke dalam kategori Prioritas {prediction[0]}, yaitu kategori Sangat Tahan Pangan.\n\n'''
+
             butuh_perbaikan = False
 
             if butuh_perbaikan or (
@@ -130,7 +132,9 @@ def performPrediction():
                 or user_data['Angka Harapan Hidup (tahun)'].iloc[0] < 67
                 or user_data['Stunting (%)'].iloc[0] > 25
             ):
+                
                 output += '\nNamun, Kota / Kabupaten Anda perlu memperbaiki aspek berikut :\n'
+
                 if user_data['NCPR'].iloc[0] > 0.75:
                     output += '\n- Kota / Kabupaten Anda perlu memperhatikan tingkat NCPR.'
                 if user_data['Kemiskinan (%)'].iloc[0] > 15:

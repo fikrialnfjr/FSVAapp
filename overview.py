@@ -51,6 +51,26 @@ def show_overview():
     Dataset yang digunakan berasal dari web Badan Pangan Nasional (BPN) : 
     https://fsva.badanpangan.go.id
     """)
+    st.write("Berikut ini adalah atribut yang terdapat pada dataset : ")
+    st.write("""
+    - NCPR\t\t: Rasio Konsumsi Normatif terhadap Ketersediaan Bersih per Kapita
+
+    - Kemiskinan (%)\t: Persentase Penduduk Miskin
+
+    - Pengeluaran Pangan (%)\t: Persentase Rumah Tangga dengan Pengeluaran Pangan > 65% Total Konsumsi
+
+    - Tanpa Listrik (%)\t: Persentase Rumah Tangga tanpa Listrik
+
+    - Tanpa Air Bersih (%)\t: Persentase Rumah Tangga tanpa Air Bersih
+
+    - Lama Sekolah Perempuan (tahun)\t: Rata-rata Lama Sekolah (tahun) Perempuan berusia 15 tahun keatas
+
+    - Rasio Tenaga Kesehatan\t: Rasio Penduduk per Tenaga Kesehatan terhadap Tingkat Kepadatan Penduduk
+
+    - Angka Harapan Hidup (tahun)\t: Angka Harapan Hidup (tahun)
+
+    - Stunting (%)\t\t: Persentase Balita dengan Tinggi Badan dibawah Standar (Stunting)
+    """)
 
     st.write("#### **Preprocessing**")
     st.write("""
