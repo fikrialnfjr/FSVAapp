@@ -11,7 +11,7 @@ def loadData():
     return df
 
 def performPrediction():
-    st.subheader("Dataset")
+    st.subheader("Dataset FSVA")
     df = loadData()
     st.write(df)
 
