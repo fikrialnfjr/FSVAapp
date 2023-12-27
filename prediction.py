@@ -97,7 +97,7 @@ def performPrediction():
             output += 'Kota / Kabupaten Anda perlu memperbaiki aspek berikut : \n'
 
             if user_data['NCPR'].iloc[0] > 1:
-                output += '\n- Perlu memperhatikan tingkat NCPR.\n'
+                output += '\n- Perlu memperhatikan tingkat NCPR (Consumption Per Capita Ratio).\n'
             if user_data['Kemiskinan (%)'].iloc[0] > 20:
                 output += '\n- Perlu memperhatikan tingkat kemiskinan.\n'
             if user_data['Pengeluaran Pangan (%)'].iloc[0] > 50:
@@ -136,7 +136,7 @@ def performPrediction():
                 output += '\nNamun, Kota / Kabupaten Anda perlu memperbaiki aspek berikut :\n'
 
                 if user_data['NCPR'].iloc[0] > 0.75:
-                    output += '\n- Perlu memperhatikan tingkat NCPR.\n'
+                    output += '\n- Perlu memperhatikan tingkat NCPR (Consumption Per Capita Ratio).\n'
                 if user_data['Kemiskinan (%)'].iloc[0] > 15:
                     output += '\n- Perlu memperhatikan tingkat kemiskinan.\n'
                 if user_data['Pengeluaran Pangan (%)'].iloc[0] > 40:
