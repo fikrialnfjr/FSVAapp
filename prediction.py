@@ -31,7 +31,7 @@ def performPrediction():
         col1, col2 = st.columns(2)
 
         with col1:
-            NCPR = st.number_input('Input nilai NCPR')
+            NCPR = st.number_input('Input nilai NCPR (Consumption Per Capita Ratio)')
             Kemiskinan = st.number_input('Input nilai Kemiskinan (%)')
             Pengeluaran_Pangan = st.number_input('Input nilai Pengeluaran Pangan (%)')
             Tanpa_Listrik = st.number_input('Input nilai Tanpa Listrik (%)')
