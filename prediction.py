@@ -93,49 +93,63 @@ def performPrediction():
         if prediction[0] == 6:
             output = 'Sangat Tahan\n\n'
 
-        if prediction[0] in [1, 2, 3]:
-            output += '\n Saran : '
+        if prediction[0] in [1, 2, 3, 4]:
+            output += f'''\n Kota / Kabupaten  Anda masuk ke dalam kategori Prioritas {prediction[0]}!\n\n,
+            Kota / Kabupaten Anda perlu memperbaiki aspek berikut : \n'''
             if user_data['NCPR'].iloc[0] > 1:
-                output += '\n- Kota Anda perlu memperhatikan tingkat NCPR.'
+                output += '\n- Kota / Kabupaten Anda perlu memperhatikan tingkat NCPR.'
             if user_data['Kemiskinan (%)'].iloc[0] > 20:
-                output += '\n- Kota Anda perlu memperhatikan tingkat kemiskinan.'
+                output += '\n- Kota / Kabupaten Anda perlu memperhatikan tingkat kemiskinan.'
             if user_data['Pengeluaran Pangan (%)'].iloc[0] > 50:
-               output += '\n- Kota Anda perlu memperhatikan tingkat pengeluaran pangan.'
+               output += '\n- Kota / Kabupaten Anda perlu memperhatikan tingkat pengeluaran pangan.'
             if user_data['Tanpa Listrik (%)'].iloc[0] > 30:
-               output += '\n- Kota Anda mungkin perlu mengadakan program subsidi untuk meningkatkan pemerataan listrik .'
+               output += '\n- Kota / Kabupaten Anda mungkin perlu mengadakan program subsidi untuk meningkatkan pemerataan listrik .'
             if user_data['Tanpa Air Bersih (%)'].iloc[0] > 50:
-               output += '\n- Kota Anda perlu mengadakan suatu program untuk meningkatkan ketersediaan air bersih.'
+               output += '\n- Kota / Kabupaten Anda perlu mengadakan suatu program untuk meningkatkan ketersediaan air bersih.'
             if user_data['Lama Sekolah Perempuan (tahun)'].iloc[0] < 7.5:
-               output += '\n- Kota Anda perlu mengadakan program perbaikan falisitas pendidikan serta edukasi mengenai pentingnya pendidikan.'
+               output += '\n- Kota / Kabupaten Anda perlu mengadakan program perbaikan falisitas pendidikan serta edukasi mengenai pentingnya pendidikan.'
             if user_data['Rasio Tenaga Kesehatan'].iloc[0] > 15:
-               output += '\n- Kota Anda perlu menambah tenaga kesehatan.'
+               output += '\n- Kota / Kabupaten Anda perlu menambah tenaga kesehatan.'
             if user_data['Angka Harapan Hidup (tahun)'].iloc[0] < 64:
-               output += '\n- Kota Anda perlu mengadakan suatu program untuk meningkatkan angka harapan hidup.'
+               output += '\n- Kota / Kabupaten Anda perlu mengadakan suatu program untuk meningkatkan angka harapan hidup.'
             if user_data['Stunting (%)'].iloc[0] > 30:
-               output += '\n- Kota Anda perlu mengadakan program edukasi mengenai asupan gizi.'
+               output += '\n- Kota / Kabupaten Anda perlu mengadakan program edukasi mengenai asupan gizi.'
 
-        if prediction[0] in [4, 5, 6]:
-            output += '\n Saran : '
-            if user_data['NCPR'].iloc[0] > 0.75:
-                output += '\n- Kota Anda perlu memperhatikan tingkat NCPR.'
-            if user_data['Kemiskinan (%)'].iloc[0] > 15:
-                output += '\n- Kota Anda perlu memperhatikan tingkat kemiskinan.'
-            if user_data['Pengeluaran Pangan (%)'].iloc[0] > 40:
-                output += '\n- Kota Anda perlu memperhatikan tingkat pengeluaran pangan.'
-            if user_data['Tanpa Listrik (%)'].iloc[0] > 20:
-                output += '\n- Kota Anda mungkin perlu mengadakan program subsidi untuk meningkatkan pemerataan listrik .'
-            if user_data['Tanpa Air Bersih (%)'].iloc[0] > 40:
-                output += '\n- Kota Anda perlu mengadakan suatu program untuk meningkatkan ketersediaan air bersih.'
-            if user_data['Lama Sekolah Perempuan (tahun)'].iloc[0] < 8.5:
-                output += '\n- Kota Anda perlu mengadakan program perbaikan falisitas pendidikan serta edukasi mengenai pentingnya pendidikan.'
-            if user_data['Rasio Tenaga Kesehatan'].iloc[0] > 10:
-                output += '\n- Kota Anda perlu menambah tenaga kesehatan.'
-            if user_data['Angka Harapan Hidup (tahun)'].iloc[0] < 67:
-                output += '\n- Kota Anda perlu mengadakan suatu program untuk meningkatkan angka harapan hidup.'
-            if user_data['Stunting (%)'].iloc[0] > 25:
-                output += '\n- Kota Anda perlu mengadakan program edukasi mengenai asupan gizi.'
-            else : 
-                output += "-\n"
-                output += "\nKota Anda dalam kondisi baik!"
-                
+        if prediction[0] in [5, 6]:
+            output += f'''\n Kota / Kabupaten  Anda masuk ke dalam kategori Prioritas {prediction[0]}!\n\n'''
+            butuh_perbaikan = False
+
+            if butuh_perbaikan or (
+                user_data['NCPR'].iloc[0] > 0.75
+                or user_data['Kemiskinan (%)'].iloc[0] > 15
+                or user_data['Pengeluaran Pangan (%)'].iloc[0] > 40
+                or user_data['Tanpa Listrik (%)'].iloc[0] > 20
+                or user_data['Tanpa Air Bersih (%)'].iloc[0] > 40
+                or user_data['Lama Sekolah Perempuan (tahun)'].iloc[0] < 8.5
+                or user_data['Rasio Tenaga Kesehatan'].iloc[0] > 10
+                or user_data['Angka Harapan Hidup (tahun)'].iloc[0] < 67
+                or user_data['Stunting (%)'].iloc[0] > 25
+            ):
+                output += '\nNamun, Kota / Kabupaten Anda perlu memperbaiki aspek berikut :\n'
+                if user_data['NCPR'].iloc[0] > 0.75:
+                    output += '\n- Kota / Kabupaten Anda perlu memperhatikan tingkat NCPR.'
+                if user_data['Kemiskinan (%)'].iloc[0] > 15:
+                    output += '\n- Kota / Kabupaten Anda perlu memperhatikan tingkat kemiskinan.'
+                if user_data['Pengeluaran Pangan (%)'].iloc[0] > 40:
+                    output += '\n- Kota / Kabupaten Anda perlu memperhatikan tingkat pengeluaran pangan.'
+                if user_data['Tanpa Listrik (%)'].iloc[0] > 20:
+                    output += '\n- Kota / Kabupaten Anda mungkin perlu mengadakan program subsidi untuk meningkatkan pemerataan listrik.'
+                if user_data['Tanpa Air Bersih (%)'].iloc[0] > 40:
+                    output += '\n- Kota / Kabupaten Anda perlu mengadakan suatu program untuk meningkatkan ketersediaan air bersih.'
+                if user_data['Lama Sekolah Perempuan (tahun)'].iloc[0] < 8.5:
+                    output += '\n- Kota / Kabupaten Anda perlu mengadakan program perbaikan fasilitas pendidikan serta edukasi mengenai pentingnya pendidikan.'
+                if user_data['Rasio Tenaga Kesehatan'].iloc[0] > 10:
+                    output += '\n- Kota / Kabupaten Anda perlu menambah tenaga kesehatan.'
+                if user_data['Angka Harapan Hidup (tahun)'].iloc[0] < 67:
+                    output += '\n- Kota / Kabupaten Anda perlu mengadakan suatu program untuk meningkatkan angka harapan hidup.'
+                if user_data['Stunting (%)'].iloc[0] > 25:
+                    output += '\n- Kota / Kabupaten Anda perlu mengadakan program edukasi mengenai asupan gizi.'
+            else:
+                output += "\nKota / Kabupaten Anda dalam kondisi baik!"
+
         st.write(output)
