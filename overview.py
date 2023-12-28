@@ -13,7 +13,7 @@ def show_overview():
     indikator utama yang menjadi pemicu terjadinya kerentanan terhadap kerawanan pangan.  
     """)
 
-    st.image("3.png", caption="Peta Ketahanan & Kerentanan Pangan Indonesia", use_column_width=True)
+    st.image("petafsva.png", caption="Peta Ketahanan & Kerentanan Pangan Indonesia", use_column_width=True)
 
     st.subheader("Why is it Importants?")
 
@@ -60,8 +60,6 @@ def show_overview():
 
     df = pd.read_csv('FSVA 2022-1.csv')
     st.write(df)
-
-    st.image("4.png", caption="Cut Off Point Indeks Ketahanan Pangan", use_column_width=True)
 
     st.write("**Atribut feature pada dataset :**")
     st.write("""
