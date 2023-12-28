@@ -102,6 +102,14 @@ def show_overview():
     st.write("#### **Preprocessing**")
     st.write("""
     Preprocessing yang dilakukan hanya menghapus kolom yang tidak digunakan pada saat modelling.
+
+    Berikut ini adalah kolom-kolom yang dihapus : 
+
+    - Wilayah
+
+    - IKP
+
+    - IKP Ranking
     """)
 
     st.write("#### **Featuring Engineering**")
