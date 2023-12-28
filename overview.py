@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 def show_overview():
     st.subheader("About")
@@ -56,6 +57,10 @@ def show_overview():
     Dataset yang digunakan berasal dari web Badan Pangan Nasional (BPN) : 
     https://fsva.badanpangan.go.id
     """)
+
+    df = pd.read_csv('FSVA 2022 Cleaned.csv')
+    st.write(df)
+
     st.write("**Atribut feature pada dataset :**")
     st.write("""
     - NCPR\t\t: Rasio Konsumsi Normatif terhadap Ketersediaan Bersih per Kapita
