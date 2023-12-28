@@ -4,37 +4,43 @@ def show_overview():
     st.subheader("About")
 
     st.write("""
-    Proyek ini menggambarkan tingkat ketahanan dan kerentanan pangan suatu wilayah melalui pendekatan prediktif
-    menggunakan Food Security and Vulnerability Atlas (FSVA).
-    FSVA merupakan alat analisis yang menyajikan informasi terkait 
-    ketahanan dan kerentanan pangan berdasarkan indikator-indikator kunci.
+    FSVA merupakan peta tematik yang menggambarkan visualisasi geografis dari hasil analisa data indikator kerentanan terhadap kerawanan pangan. 
+    FSVA disusun menggunakan sembilan indikator yang mewakili tiga aspek ketahanan pangan, yaitu ketersediaan, keterjangkauan dan pemanfaatan pangan.
 
-    Pemilihan topik FSVA sebagai fokus proyek ini didasarkan pada pentingnya pemahaman mendalam terhadap ketahanan pangan. FSVA memberikan pemahaman yang holistik terhadap 
-    faktor-faktor yang memengaruhi ketahanan pangan dan berpotensi memberikan wawasan berharga untuk kebijakan dan strategi mitigasi.
+    FSVA adalah sistem kewaspadaan yang memberikan rekomendasi kepada pembuat keputusan dalam 
+    penyusunan kebijakan dan program intervensi baik di tingkat pusat dan daerah dengan melihat 
+    indikator utama yang menjadi pemicu terjadinya kerentanan terhadap kerawanan pangan.  
     """)
+
+    st.subheader("Why is it Importants?")
+
+    st.write('''
+    Ketersediaan pangan yang lebih kecil dibandingkan kebutuhannya dapat menciptakan ketidak-stabilan ekonomi. 
+    Berbagai gejolak sosial dan politik dapat juga terjadi jika ketahanan pangan terganggu. 
+    Kondisi pangan yang kritis ini bahkan dapat membahayakan stabilitas ekonomi dan stabilitas Nasional.
+    ''')
+
+    st.subheader("Problems")
+
+    st.write('''
+    Banyak daerah di Indonesia yang masih belum memiliki Indeks Ketahanan Pangan (IKP) atau Indeks Komposit 
+    yang menjadi penentu pemerintah dalam membuat skala prioritas perhatian dalam upaya pemerintah menciptakan Indonesia Tahan Pangan.
+    ''')
 
     st.subheader("Goals")
 
     st.write("""
-    Tujuan proyek ini adalah mengembangkan model prediktif untuk mengukur tingkat ketahanan dan kerentanan pangan 
-    suatu wilayah berdasarkan indikator-indikator tertentu. Model ini diharapkan dapat memberikan pemahaman yang lebih 
-    akurat dan komprehensif terhadap situasi pangan di wilayah tersebut. Hasil prediksi akan mengelompokkan wilayah 
-    ke dalam salah satu kategori berikut:
+    - Memberikan kemudahan kepada daerah-daerah yang tertinggal dalam penyediaan data
 
-    - Komposit 1 mengartikan bahwa "Sangat Rentan"
+    - Menghilangkan kerumitan perhitungan
 
-    - Komposit 2 mengartikan bahwa "Rentan"
+    - Waktu yang lebih cepat untuk memperoleh status ketahanan pangan
 
-    - Komposit 3 mengartikan bahwa "Agak Rentan"
+    - Proses mendapatkan saran yang tepat dan cepat menjadi lebih efisien
 
-    - Komposit 4 mengartikan bahwa "Agak Tahan"
+    Dengan aplikasi ini kami berharap mendukung pemerintah dalam menciptakan masyarakat 
+    yang tahan pangan dimana hal tersebut juga memberi dampak positif bagi kemajuan dan keberlanjutan masyarakat.
 
-    - Komposit 5 mengartikan bahwa "Tahan"
-
-    - Komposit 6 mengartikan bahwa "Sangat Tahan"
-
-    Kategori ini dapat meningkatkan pemahaman terhadap situasi pangan dan memberikan kontribusi dalam mengambil 
-    keputusan yang berkelanjutan dan berdampak positif terhadap ketahanan pangan di wilayah yang diteliti.
     """)
 
     st.subheader("Workflow App")
