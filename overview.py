@@ -46,12 +46,10 @@ def show_overview():
     """)
 
     st.subheader("Workflow App")
-    local_image_1 = "1.png"
-    st.image(local_image_1, caption="Workflow FSVA", use_column_width=True)
+    st.image("1.png", caption="Workflow FSVA", use_column_width=True)
 
     st.subheader("Workflow Modelling")
-    local_image_2 = "2.png"
-    st.image(local_image_2, caption="Workflow Modelling", use_column_width=True)
+    st.image("2.png", caption="Workflow Modelling", use_column_width=True)
 
     st.write("#### **Pengumpulan Dataset**")
     st.write("""
