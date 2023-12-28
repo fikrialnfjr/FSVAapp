@@ -12,6 +12,8 @@ def show_overview():
     indikator utama yang menjadi pemicu terjadinya kerentanan terhadap kerawanan pangan.  
     """)
 
+    st.image("petafsva.png", caption="Peta Ketahanan & Kerentanan Pangan Indonesia", use_column_width=True)
+
     st.subheader("Why is it Importants?")
 
     st.write('''
