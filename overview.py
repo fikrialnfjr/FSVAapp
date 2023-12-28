@@ -58,7 +58,7 @@ def show_overview():
     https://fsva.badanpangan.go.id
     """)
 
-    df = pd.read_csv('FSVA 2022 Cleaned.csv')
+    df = pd.read_csv('FSVA 2022.csv')
     st.write(df)
 
     st.write("**Atribut feature pada dataset :**")
