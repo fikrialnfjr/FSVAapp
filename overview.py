@@ -56,7 +56,7 @@ def show_overview():
     Dataset yang digunakan berasal dari web Badan Pangan Nasional (BPN) : 
     https://fsva.badanpangan.go.id
     """)
-    st.write("Berikut ini adalah atribut yang terdapat pada dataset : ")
+    st.write("**Atribut feature pada dataset :**")
     st.write("""
     - NCPR\t\t: Rasio Konsumsi Normatif terhadap Ketersediaan Bersih per Kapita
 
@@ -76,6 +76,23 @@ def show_overview():
 
     - Stunting (%)\t\t: Persentase Balita dengan Tinggi Badan dibawah Standar (Stunting)
     """)
+
+    st.write("**Atribut target pada dataset :**")
+    st.write('''
+    Komposit : Indikator yang menunjukkan tingkat ketahanan suatu wilayah terhadap masalah pangan.
+
+    - Komposit 1 mengartikan bahwa "Sangat Rentan"
+
+    - Komposit 2 mengartikan bahwa "Rentan"
+
+    - Komposit 3 mengartikan bahwa "Agak Rentan"
+
+    - Komposit 4 mengartikan bahwa "Agak Tahan"
+
+    - Komposit 5 mengartikan bahwa "Tahan"
+
+    - Komposit 6 mengartikan bahwa "Sangat Tahan"
+    ''')
 
     st.write("#### **Preprocessing**")
     st.write("""
