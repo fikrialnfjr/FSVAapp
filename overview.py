@@ -150,7 +150,7 @@ def show_overview():
     memiliki dimensi tinggi dan sangat baik untuk tugas klasifikasi, terutama dalam kasus ketika ada kebutuhan untuk 
     menangani data yang tidak linier.
 
-    Model Random Forest terbaik yang kami buat adalah : 
+    Model SVM terbaik yang kami buat adalah : 
     
     SVC(kernel='rbf', C=1.0, gamma='scale', random_state=42)
 
